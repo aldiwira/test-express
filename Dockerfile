@@ -5,7 +5,7 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Salin file package.json dan pnpm-lock.yaml
-COPY package.json pnpm-lock.yaml ./
+COPY package.json ./
 
 # Instal PNPM dan dependency
 RUN corepack enable && pnpm install --prod
